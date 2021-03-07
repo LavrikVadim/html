@@ -16,6 +16,10 @@ def hello_world1():
 def hello_world2():
     return render_template('technologies.html')
 
+@app.route('/new')
+def hello_world3():
+    return render_template('newitems.html')
+
 @app.route('/about/<username>')
 def about(username):
     return f'All about {escape(username)}'
