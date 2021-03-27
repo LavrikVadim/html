@@ -1,12 +1,23 @@
 from flask import Flask, render_template
 from markupsafe import escape
 
+import sqlite3
+
+
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def homepage():
+    con = sqlite3.connect('articles.db')
+    cur = con.cursor()
+    cur.execute("SELECT * FROM articles")
+    con.commit()
+    con.close()
+
     return render_template('mainpage.html')
+
+
 
 @app.route('/about')
 def hello_world1():
