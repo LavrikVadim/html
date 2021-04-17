@@ -1,42 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-            crossorigin="anonymous"></script>
-    <title>Автомобильный сайт</title>
-    <link rel="stylesheet" href="/static/styles.css">
+{% extends 'mainpage.html' %}
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
 </head>
 <body>
-<header>
-    <div class="row">
-        <div class="col-lg-12 pb-3">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Главная</a>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/about">Легендарные автомобили</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tech">Автомобильные технологии</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/new">Автоновинки</a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Проекты автоблоггеров</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">О сайте</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
 <div class="row">
     <div class="col-lg-12 pb-3">
         <div class="d-flex justify-content-center"><h1>Автомобильные иновации</h1>
@@ -53,108 +22,130 @@
         </div>
     </div>
     <div class="col-12 col-lg-9 py-3 ps-5">
-    <div class="row">
-        <div class="col-12">
-            <p>В сети появилась патентная заявка Apple, описывающая систему, в которой транспортное средство можно
-                разблокировать с помощью мобильной биометрической аутентификации. Двери автомобиля можно будет
-                открывать,
-                используя Face ID.
-                Доступ к транспортным средствам осуществляется с помощью ключа. Пульт-брелок обеспечивает удаленный
-                доступ к
-                автомобилю, в частности, открывает двери и запускает двигатель. Однако, большинство обычных брелков или
-                систем
-                входа оснащены однофакторными системами с низким уровнем безопасности.
-                Например, некоторые системы удаленного доступа к авто уязвимы для атак типа „человек посередине“. Кроме
-                того,
-                они не способны идентифицировать личность, поэтому любой человек с брелком может управлять транспортным
-                средством.</p>
-            <img src="https://www.digger.ru/resize/668/-/storage/app/media/uploaded-files/apple-car-concept-1024x691.jpg"
-                 class="d-block w-70">
-        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>В сети появилась патентная заявка Apple, описывающая систему, в которой транспортное средство можно
+                    разблокировать с помощью мобильной биометрической аутентификации. Двери автомобиля можно будет
+                    открывать,
+                    используя Face ID.
+                    Доступ к транспортным средствам осуществляется с помощью ключа. Пульт-брелок обеспечивает удаленный
+                    доступ к
+                    автомобилю, в частности, открывает двери и запускает двигатель. Однако, большинство обычных брелков
+                    или
+                    систем
+                    входа оснащены однофакторными системами с низким уровнем безопасности.
+                    Например, некоторые системы удаленного доступа к авто уязвимы для атак типа „человек посередине“.
+                    Кроме
+                    того,
+                    они не способны идентифицировать личность, поэтому любой человек с брелком может управлять
+                    транспортным
+                    средством.</p>
+                <img src="https://www.digger.ru/resize/668/-/storage/app/media/uploaded-files/apple-car-concept-1024x691.jpg"
+                     class="d-block w-70">
+            </div>
 
-        <div class="col-lg-12 pb-3 py-5 ps-4">
-            <h2>2. Автономные транспортные средства (AV).</h2>
-        </div>
-        <div class="col-12 col-lg-9 py-3 ps-5">
-            <p>
-                Автономные транспортные средства или автомобили с автономным управлением стремятся свести к минимуму
-                потребность в людях-водителях и выглядят готовыми к трансформации повседневных перевозок. Автопарки AV
-                расширяют объем поставок последней мили, сокращают время простоя и стремятся сделать общественный
-                транспорт
-                относительно безопасным. Например, путем уменьшения количества аварий, вызванных усталостью или
-                небрежностью
-                водителя. Автомобили оснащены передовыми технологиями распознавания, такими как компьютерное зрение с
-                улучшенным искусственным интеллектом для выявления препятствий на маршруте.</p>
-            <div class="py-1">
-                <img src="https://autoassa.ru/media/gallery/131039-275035c24c707678ffb7709411ee2c66.jpg"
-                     class="d-block w-100">
+            <div class="col-12 col-lg-12 pb-3 py-5 ps-4">
+                <h2>2. Автономные транспортные средства (AV).</h2>
             </div>
-            <div class="py-2">
+            <div class="col-12 col-lg-9 py-3 ps-5">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
                 <p>
-                    Находящийся в США стартап Intvo разрабатывает технологию прогнозирования поведения пешеходов. В
-                    отличие от
-                    технологий обнаружения двумерных (2D) и трехмерных (3D) объектов, которые учитывают ограниченные
-                    параметры,
-                    их решение проверяет положение головы, зрительный контакт и движения ног пешеходов, погодные условия
-                    и
-                    определяет уровень риска. Это уменьшает количество ложных срабатываний при обнаружении пешеходов и
-                    повышает
-                    безопасность автономных транспортных средств.</p>
+                    Автономные транспортные средства или автомобили с автономным управлением стремятся свести к минимуму
+                    потребность в людях-водителях и выглядят готовыми к трансформации повседневных перевозок. Автопарки
+                    AV
+                    расширяют объем поставок последней мили, сокращают время простоя и стремятся сделать общественный
+                    транспорт
+                    относительно безопасным. Например, путем уменьшения количества аварий, вызванных усталостью или
+                    небрежностью
+                    водителя. Автомобили оснащены передовыми технологиями распознавания, такими как компьютерное зрение
+                    с
+                    улучшенным искусственным интеллектом для выявления препятствий на маршруте.</p>
+                    </div>
+                <div class="py-1">
+                    <img src="https://autoassa.ru/media/gallery/131039-275035c24c707678ffb7709411ee2c66.jpg"
+                         class="d-block w-100">
+                </div>
+                </div>
+                <div class="py-2">
+                    <p>
+                        Находящийся в США стартап Intvo разрабатывает технологию прогнозирования поведения пешеходов. В
+                        отличие от
+                        технологий обнаружения двумерных (2D) и трехмерных (3D) объектов, которые учитывают ограниченные
+                        параметры,
+                        их решение проверяет положение головы, зрительный контакт и движения ног пешеходов, погодные
+                        условия
+                        и
+                        определяет уровень риска. Это уменьшает количество ложных срабатываний при обнаружении пешеходов
+                        и
+                        повышает
+                        безопасность автономных транспортных средств.</p>
+
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <div class="col-12 col-lg-3 py-3 ps-5">
-    <div class="row">
+        <div class="row">
 
-        <div class="card col-12">
-            <div class="card-body h-100">
-                <img src="https://somanyhorses.ru/wp-content/images/news/avto-novosti/2021/2/v-rossii-prodaetsya-lamborghini-aventador-bashkirskoy-sborki/6038eb736e6d1_3240872d9f56530bb1e7125d95da44bc.jpg"
-                     class="card-img-top" alt="...">
-                <h4 class="card-title">В России продаётся Lamborghini Aventador башкирской сборки</h4>
-                <p class="card-text">Недавно на торговой онлайн-площадке появилось интересное объявление о продаже
-                    суперкара Lamborghini Aventador. Примечательно, что автомобиль был собран не на «родине пиццы и
-                    пасты», а в России в Республике Башкортостан.</p>
-                <a href="https://somanyhorses.ru/v-rossii-prodaetsya-lamborghini-aventador-bashkirskoy-sborki/"
-                   class="btn btn-primary">Читать больше</a>
+            <div class="card col-12">
+                <div class="card-body h-100">
+                    <img src="https://somanyhorses.ru/wp-content/images/news/avto-novosti/2021/2/v-rossii-prodaetsya-lamborghini-aventador-bashkirskoy-sborki/6038eb736e6d1_3240872d9f56530bb1e7125d95da44bc.jpg"
+                         class="card-img-top" alt="...">
+                    <h4 class="card-title">В России продаётся Lamborghini Aventador башкирской сборки</h4>
+                    <p class="card-text">Недавно на торговой онлайн-площадке появилось интересное объявление о продаже
+                        суперкара Lamborghini Aventador. Примечательно, что автомобиль был собран не на «родине пиццы и
+                        пасты», а в России в Республике Башкортостан.</p>
+                    <a href="https://somanyhorses.ru/v-rossii-prodaetsya-lamborghini-aventador-bashkirskoy-sborki/"
+                       class="btn btn-primary">Читать больше</a>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <div class="card-body h-100">
+                    <img src="https://somanyhorses.ru/wp-content/images/zvezdi-za-rulem/zvezdnoe-avto/2019/7/dava-pro-avariyu-na-motocikle-preodolenie-trudnostey-perekrytie-arbata-i-ugrozy-v-soc-setyah/5d27600b5e3f2_dava1.jpg"
+                         class="card-img-top" alt="...">
+                    <h4 class="card-title">Дава про аварию на мотоцикле, преодоление трудностей, перекрытие Арбата и
+                        угрозы в соцсетях</h4>
+                    <p class="card-text">Блогер и певец Давид Манукян, известный широкой аудитории, как Дава, поделился
+                        с нами историей своего успеха, рассказал о преодолении трудностей и о том, чем он живет и дышит
+                        каждый день.</p>
+                    <a href="https://somanyhorses.ru/dava-pro-avariyu-na-motocikle-preodolenie-trudnostey-perekrytie-arbata-i-ugrozy-v-soc-setyah/"
+                       class="btn btn-primary">Читать больше</a>
+                </div>
+            </div>
+
+            <div class="card col-12">
+                <div class="card-body h-100">
+                    <img src="https://somanyhorses.ru/wp-content/images/news/avto-novosti/2021/4/v-germanii-sozdadut-bystreyshiy-elektrogiperkar-na-planete/6078ab57c7532_1f03a6d9fb814bfaa873d2b6b98d842d.jpg"
+                         class="card-img-top" alt="...">
+                    <h4 class="card-title">В Германии создадут быстрейший электрогиперкар на планете</h4>
+                    <p class="card-text">Немецкая компания Elektron Motors показала первые изображения своего будущего полностью электрического гиперкара Elektron Quasar.</p>
+                    <a href="https://somanyhorses.ru/v-germanii-sozdadut-bystreyshiy-elektrogiperkar-na-planete/"
+                       class="btn btn-primary">Читать больше</a>
+                </div>
+            </div>
+
+
+            <div class="card col-12">
+                <div class="card-body h-100">
+                    <img src="https://somanyhorses.ru/wp-content/images/news/avto-novosti/2021/2/novyy-giperkar-gordon-murray-t-50s-nazvali-v-chest-niki-laudy/6039182c67c04_gordon_murray-t-50s_niki_lauda-2023-1600-01.jpg"
+                         class="card-img-top">
+                    <h4 class="card-title">Новый гиперкар Gordon Murray T.50S назвали в честь Ники Лауды</h4>
+                    <p class="card-text">Британская марка Gordon Murray Automotive представила трековую версию гиперкара
+                        GMA
+                        T.50S, который был назван в честь трёхкратного чемпиона «Формулы-1» Ники Лауды.</p>
+                    <a href="https://somanyhorses.ru/novyy-giperkar-gordon-murray-t-50s-nazvali-v-chest-niki-laudy/"
+                       class="btn btn-primary">Читать больше</a>
+                </div>
             </div>
         </div>
-
-        <div class="card col-12">
-            <div class="card-body h-100">
-                <img src="https://somanyhorses.ru/wp-content/images/news/avto-novosti/2021/2/novyy-giperkar-gordon-murray-t-50s-nazvali-v-chest-niki-laudy/6039182c67c04_gordon_murray-t-50s_niki_lauda-2023-1600-01.jpg"
-                     class="card-img-top">
-                <h4 class="card-title">Новый гиперкар Gordon Murray T.50S назвали в честь Ники Лауды</h4>
-                <p class="card-text">Британская марка Gordon Murray Automotive представила трековую версию гиперкара GMA
-                    T.50S, который был назван в честь трёхкратного чемпиона «Формулы-1» Ники Лауды.</p>
-                <a href="https://somanyhorses.ru/novyy-giperkar-gordon-murray-t-50s-nazvali-v-chest-niki-laudy/"
-                   class="btn btn-primary">Читать больше</a>
-            </div>
-        </div>
-    </div>
     </div>
 </div>
 
 
-<div class="dropdown " style="position: absolute; top:40px; right:50px">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-       data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-justify"></i>
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-justify"
-             viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                  d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0
-                  1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0
-                  1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-    </a>
 
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
 </div>
-
+{% endblock %}
 </body>

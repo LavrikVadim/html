@@ -1,81 +1,126 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-            crossorigin="anonymous"></script>
-    <title>Легендарные автомобили</title>
-</head>
+{% extends 'mainpage.html' %}
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+<title>Легендарные автомобили</title>
 <body>
-<header>
+
+<div class="container">
     <div class="row">
-        <div class="col-lg-12 pb-3">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Главная</a>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/about">Легендарные автомобили</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tech">Автомобильные технологии</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="/new">Автоновинки</a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Проекты автоблоггеров</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">О сайте</a>
-                </li>
-            </ul>
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center"><h1>Легендарные автомобили</h1>
+            </div>
         </div>
     </div>
-</header>
-<div class="container">
-    <main>
-        <article>
-            <div class="row">
-                <div class="col-lg-12 pb-5">
-                    <div class="d-flex justify-content-center"><h1>Легендарные автомобили</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
 
-                <div class="col-lg-12 pb-5">
-                    <img src="https://wroom.ru/i/cars2/bmw_5_1.jpg" class="img-thumbnail">
-                    <h2>BMW 5 серии</h2>
-                    <p>Автомобили бизнес-класса, производимые компанией BMW с 1972 года.
-                        В настоящее время выпускаются автомобили седьмого поколения пятой серии.</p>
-                    <p><a class="btn btn-secondary" href="https://wroom.ru/cars/bmw/5/history">Читать больше »</a></p>
-                </div>
-                <div class="col-lg-12 pb-5">
-                    <img src="https://wroom.ru/i/cars2/bmw_x5_1.jpg" class="img-thumbnail">
-                    <h2>BMW X5</h2>
-                    <p>Среднеразмерный кроссовер от немецкого автопроизводителя BMW.
-                        Автомобиль был представлен в 1999 году на автосалоне в Детройте.</p>
-                    <p><a class="btn btn-secondary" href="https://wroom.ru/cars/bmw/x5/history">Читать больше »</a></p>
-                </div>
-                <div class="col-lg-12 pb-5">
-                    <img src="https://s.rdrom.ru/4/pubs/4483/31292/1684552.jpg" class="img-thumbnail">
-                    <h2>Nissan GT-R</h2>
-                    <p>Спорткар, выпускаемый компанией Nissan Motor. Представлен в качестве серийной модели на Токийском
-                        автосалоне
-                        24 октября 2007 года, продажи начались в 2008 году в Японии, затем в США и Европе. В отличие от
-                        предшественников,
-                        выпускавшихся только для JDM и ограниченным тиражом поставлявшихся в Великобританию,
-                        имеется вариант с левым рулём.</p>
-                    <p><a class="btn btn-secondary" href="https://www.drom.ru/info/misc/nissan-gt-r-31292.html">Читать
-                        больше »</a></p>
-                </div>
+    <div class="row">
+
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://wroom.ru/i/cars2/jaguar_etype_1_3.jpg"
+                     class="d-block" width="1000px" height="700px">
             </div>
-        </article>
-    </main>
+            <h1>Jaguar E-Type</h1>
+            <h5>Заднеприводный спорткар Jaguar E-Type, ставший одним из автомобильных символов 1960-х годов, дебютировал
+                в 1961 году. В отличие от предыдущих машин марки у него был несущий кузов. На американском рынке модель
+                называлась Jaguar XK-E.</h5>
+            <p><a class="btn btn-secondary" href="https://wroom.ru/cars/jaguar/etype">Читать больше »</a>
+            </p>
+        </div>
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://wroom.ru/i/cars2/bmw_5_1.jpg"
+                     class="d-block" width="1000px" height="700px">
+            </div>
+            <h1>BMW 5 серии</h1>
+            <h5>Автомобили бизнес-класса, производимые компанией BMW с 1972 года.
+                В настоящее время выпускаются автомобили седьмого поколения пятой серии.</h5>
+            <a class="btn btn-secondary" href="https://wroom.ru/cars/bmw/5/history">Читать больше »</a>
+            </p>
+        </div>
+
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://wroom.ru/i/cars2/bmw_x5_1.jpg"
+                     class="d-block" width="1000px" height="700px">
+            </div>
+            <h1>BMW X5</h1>
+            <h5>Среднеразмерный кроссовер от немецкого автопроизводителя BMW.
+                Автомобиль был представлен в 1999 году на автосалоне в Детройте.</h5>
+            <p><a class="btn btn-secondary" href="https://wroom.ru/cars/bmw/x5/history">Читать больше »</a>
+            </p>
+        </div>
+
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://s.rdrom.ru/4/pubs/4483/31292/1684552.jpg"
+                     class="d-block" width="1000px" height="700px">
+            </div>
+            <h1>Nissan GT-R</h1>
+            <h5>Спорткар, выпускаемый компанией Nissan Motor. Представлен в качестве серийной модели на
+                Токийском
+                автосалоне
+                24 октября 2007 года, продажи начались в 2008 году в Японии, затем в США и Европе. В отличие
+                от
+                предшественников,
+                выпускавшихся только для JDM и ограниченным тиражом поставлявшихся в Великобританию,
+                имеется вариант с левым рулём.</h5>
+            <p><a class="btn btn-secondary" href="https://www.drom.ru/info/misc/nissan-gt-r-31292.html">Читать больше
+                »</a>
+            </p>
+        </div>
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1582174/pub_5ddff6192beb4900b1246efc_5ddffd1896e9477374aa2c6b/scale_1200"
+                     class="d-block" width="1100px" height="700px">
+            </div>
+            <h1>BMW 7-серии (Е38)</h1>
+            <h5>Классная тачка "бэха семерка" в легендарном 38 кузове — боевая машина вымогателей и пик развития чехла
+                для перевозки бейсбольных бит. В лихие годы рыночной экономики, было очень плохой приметой ездить на
+                кладбище ночью, в багажнике Е38.</h5>
+            <p><a class="btn btn-secondary" href="https://wroom.ru/cars/bmw/7/history">Читать больше »</a>
+            </p>
+        </div>
+
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1570751/pub_5ddff6192beb4900b1246efc_5ddffd935d6c4b00b173eeb0/scale_1200"
+                     class="d-block" width="1000px" height="700px">
+            </div>
+            <h2>Mercedes-Benz W123</h2>
+            <p>Седан Mercedes-Benz серии W123 был представлен немецкой компанией в январе 1976 года, как замена модели
+                W114/W115. Эту модель можно считать предшественником нынешнего «Е-класса». </p>
+            <p><a class="btn btn-secondary" href="https://wroom.ru/cars/mercedesbenz/w123">Читать больше »</a>
+            </p>
+        </div>
+
+
+        <div class="col-lg-12 pb-5">
+            <div class="d-flex justify-content-center">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/1336031/pub_5ddff6192beb4900b1246efc_5de0042042415f111ccf1f98/scale_1200"
+                     class="d-block" width="1000px" height="700px">
+            </div>
+            <h1>Mercedes-Benz W140</h1>
+            <h5> В 1991 году в немецком Штуттгарте стартовало производство нового «эс-класса» серии W140, ставшего
+                впоследствии в России символом престижного и дорогого автомобиля. Вслед за седаном в 1992 году
+                дебютировало купе.</h5>
+            <p><a class="btn btn-secondary" href="https://wroom.ru/cars/mercedesbenz/s/history">Читать больше »</a>
+            </p>
+        </div>
+
+
+    </div>
 </div>
+</div>
+
+
 </body>
-</html>
+{% endblock %}

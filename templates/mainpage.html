@@ -8,275 +8,49 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
-    <title>Автомобильный сайт</title>
-
+    {% block title %}
+    Автомобильный сайт
+    {% endblock %}
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 <header>
-    <div class="row">
-        <div class="col-lg-12 pb-3">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Главная</a>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/about">Легендарные автомобили</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/tech">Автомобильные технологии</a>
-                </li>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Главная</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/new">Автоновинки</a>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Проекты автоблоггеров</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">О сайте</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about">Легендарные автомобили</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tech">Автомобильные технологии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/new">Автоновинки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">ADD</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="{{ url_for ('search_article') }} ">
+                    <input class="form-control me-2" type="поиск" placeholder="Поиск" name="q">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </nav>
 </header>
-<article>
-    <div class="row">
-        <div class="col-lg-12 pb-4">
-            <div class="d-flex justify-content-center"><h3>Добро пожаловать на мой сайт!</h3>
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
             </div>
         </div>
-    </div>
-    <footer>
-
-        <div class="row">
-            <div class="col-lg-12 col-sm-12 pb-5 ps-5">
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="2000">
-                            <img src="https://www.farminguk.com/images/news/44520_3.jpg"
-                                 class="d-block" width="1200px" height="700px">
-                                <div class="d-flex justify-content-center">
-                                    <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                        1796г - Паровой автомобиль</h2>
-                                </div>
-                            </div>
-
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://pbs.twimg.com/media/EPcWQmKWkAMxAT9.jpg:large"
-                                 class="d-block" width="1200px" height="700px">
-                                <div class="d-flex justify-content-center">
-                                    <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                        1885г - Автомобили с двигателем внутренего сгорания</h2>
-                                </div>
-                            </div>
-
-
-                        <div class="carousel-item">
-                            <img src="https://s.auto.drom.ru/i24220/pubs/4483/59971/2810549.jpeg"
-                                 class="d-block" width="1200px" height="700px">
-                            <div class="d-flex justify-content-center">
-                                <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                    1900-2000г - Развитие автомобилей с ДВС</h2>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="https://avatars.mds.yandex.net/get-zen_doc/1658056/pub_5dc5bfa3452197271c9b932d_5dc5c3dee5968126aa18b709/scale_1200"
-                                 class="d-block" width="1200px" height="700px">
-                            <div class="d-flex justify-content-center">
-                                <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                    2010г - Электромобили</h2>
-                            </div>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <img src="https://avatars.mds.yandex.net/get-zen_doc/1587860/pub_5dc5bfa3452197271c9b932d_5dc5c6a928fbfa14e839e81a/scale_1200"
-                                 class="d-block" width="1200px" height="700px">
-                            <div class="d-flex justify-content-center">
-                                <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                    2020г -
-                                    Искуственный интеллект и виртуальность</h2>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="https://avatars.mds.yandex.net/get-zen_doc/1925930/pub_5dc5bfa3452197271c9b932d_5dc5c7ee8ddf2d1f5dfbc341/scale_1200"
-                                 class="d-block" width="1200px" height="700px">
-                            <div class="d-flex justify-content-center">
-                                <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                    2030г-без пилота с комфортом </h2>
-                            </div>
-                        </div>
-
-
-                    <div class="carousel-item">
-                        <img src="https://avatars.mds.yandex.net/get-zen_doc/1209300/pub_5dc5bfa3452197271c9b932d_5dc5ca20e482af743b167558/scale_1200"
-                             class="d-block" width="1200px" height="700px">
-                        <div class="d-flex justify-content-center">
-                            <h2 style="color : black;  padding: 6px;   text-shadow: 1px 1px 11px black, 0 0 50px blue">
-                                2040г - Автомобиль-услуга </h2>
-                        </div>
-                    </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-
-            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
-        </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-sm-3 col-md-4 py-3 pb-10">
-                <div class="card h-100" style="max-width: 550px;">
-                    <div class="card-body">
-                        <img src="https://static3.car.ru/uploaded/2021/2/3/2210/650__optimized_12232_732bbc037995c2f6d7859105dcc730b8_1480x800_v2.webp"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">Компания Porsche внедрила на своём сайте интеллектуальный
-                            конфигуратор опций</h4>
-                        <p class="card-text">Немецкая автомобилестроительная компания Porsche активно внедряет
-                            современные технологии
-                            не только в новые модели, но и использует в других видах деятельности. Недавно на
-                            сайте производителя
-                            появился интеллектуальный конфигуратор, позволяющий максимально быстро и точно
-                            получать индивидуальные
-                            предложения по подбору опций.</p>
-                        <a href="https://car.ru/news/tehnologii/106130-kompaniya-porsche-vnedrila-na-svoem-sayte-intellektualnyiy-konfigurator-optsiy/"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 550px;">
-                    <div class="card-body">
-                        <img src="https://pic.auto.mail.ru/998006/"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">Land Rover выпустил самый мощный Defender V8</h4>
-                        <p class="card-text">Внедорожник оснастили 5-литровым 525-сильным двигателем V8.</p>
-                        <a href="https://auto.mail.ru/article/80578-land_rover_vypustil_samyi_moshchnyi_defender_v8_foto/"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 4700px;">
-                    <div class="card-body">
-                        <img src="https://lviv.com/wp-content/uploads/2016/11/Top-Gear-014.jpg"
-                             class="card-img-top h-90 w-200">
-                        <h4 class="card-title">Top Gear выпустил трейлер нового сезона</h4>
-                        <p class="card-text">Этот сезон британского автошоу станет 30-м по счету.</p>
-                        <a href="https://auto.mail.ru/article/80576-top_gear_vypustil_treiler_novogo_sezona/"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://pulse.mail.ru/article/img/imgpreview?key=pic6360486483914182916&mb=pulse"
-                             class="card-img-top h-90 w-200">
-                        <h4 class="card-title">Компания Great Wall показала новый кроссовер Mocha</h4>
-                        <p class="card-text">На рынке данная новинка появится в двух версия исполнения, а именно в
-                            обычной и заряжаемо-гибридной.</p>
-                        <a href="https://pulse.mail.ru/article/kompaniya-great-wall-pokazala-novyj-krossover-mocha-5592773511775623794-196354472667132110/?utm_content=lenta_main_mail_ru&utm_campaign=main&utm_
-                            referrer=https%3A%2F%2Fpulse.mail.ru&utm_source=pulse_mail_ru" class="btn btn-primary">Читать
-                            больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://avatars.mds.yandex.net/get-ynews/3072851/1049bce375017b0b30f8068af742ef62/254x173"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">LADA Granta получит модернизированный базовый двигатель</h4>
-                        <p class="card-text">Семейство LADA Granta получит модернизированный восьмиклапанный двигатель
-                            1.6 л, которым ранее начал оснащаться обновленный LADA Largus.</p>
-                        <a href="https://yandex.com/news/story/LADA_Granta_poluchit_modernizirovannyj_bazovyj_dvigatel--2a7e81e08c731be57a913a000934344e?lang=ru&rubric=auto&fan=1&stid=YHQ1hDCQguysdfpVdHCB&t=1614258096&persistent_id=132432851"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://avatars.mds.yandex.net/get-ynews/2758096/0a979b273180a7cca60f88c03f24f6a7/254x173"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">В России на автозаводе «Автотор» началось производство минивэна Kia
-                            Carnival 2021 года</h4>
-                        <p class="card-text">На производственной площадке «Автотор», расположенной в Калининграде,
-                            приступили к локальной сборке кроссвэна KIA Carnival четвертого поколения.</p>
-                        <a href="https://yandex.com/news/story/V_Rossii_na_avtozavode_Avtotor_nachalos_proizvodstvo_minivehna_Kia_Carnival_2021_goda--cd71b66b37dfd7932b16256eb353e444?lang=ru&rubric=auto&fan=1&stid=tzdaN5tdUbx05TGqqao4&t=1614258096&persistent_id=133360332"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://avatars.mds.yandex.net/get-ynews/2425362/4344a53c6803ead91c8367ef95464ab0/254x173"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">Компания Skoda рассказала о новой Fabia</h4>
-                        <p class="card-text">Новая Skoda Fabia четвертого поколения отличается ярким дизайном, большим
-                            салоном, повышенным комфортом и, благодаря передовым системам, еще более высоким уровнем
-                            безопасности.</p>
-                        <a href="https://iz.ru/1129342/2021-02-25/v-skoda-rasskazali-o-novom-khetchbeke-fabia?utm_source=yxnews&utm_medium=desktop"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://avatars.mds.yandex.net/get-ynews/31028/0c21fc286b3c7e882fd0bd20871cf8b2/254x173"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">АвтоВАЗ продолжает тестовое производство обновленной Lada Vesta</h4>
-                        <p class="card-text">Несколько дней назад на Ижевском заводе LADA собрали еще два прототипа
-                            обновленной Vesta.</p>
-                        <a href="https://tarantas.news/posts/id19048-swauh9wruaqlmml6ghkd?utm_source=yxnews&utm_medium=desktop"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://s0.rbk.ru/v6_top_pics/resized/1440xH/media/img/3/00/756138305649003.jpg"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">Налог на роскошь — 2021. Какие машины включат в список</h4>
-                        <p class="card-text">Минпромторг скоро обновит список автомобилей, которые облагаются повышенным
-                            транспортным налогом. В этом году в перечне могут оказаться даже Skoda, Kia, Toyota и
-                            Hyundai</p>
-                        <a href="https://www.autonews.ru/news/6030e25b9a7947590e7c29b4" class="btn btn-primary">Читать
-                            больше</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-md-4 py-3">
-                <div class="card h-100" style="max-width: 400px;">
-                    <div class="card-body">
-                        <img src="https://i.trse.ru/2021/02/iKk9.jpg"
-                             class="card-img-top h-70 w-200">
-                        <h4 class="card-title">Новый универсал Peugeot 308 вывели на тесты</h4>
-                        <p class="card-text">Peugeot 308 нового поколения уже проходил испытательные тесты на общих
-                            дорогах, но все зафиксированные на фотографиях прототипы были хэтчбеками.</p>
-                        <a href="https://naavtotrasse.ru/peugeot/fotografii-i-tehnicheskie-harakteristiki-peugeot-308-sw.html?utm_source=yxnews&utm_medium=desktop"
-                           class="btn btn-primary">Читать больше</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </footer>
 </article>
 </body>
-</html>
