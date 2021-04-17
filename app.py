@@ -6,6 +6,8 @@ from flask_migrate import Migrate
 from markupsafe import escape
 from forms import ArticleForm
 from flask_bootstrap import Bootstrap
+import os
+import fcntl
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
